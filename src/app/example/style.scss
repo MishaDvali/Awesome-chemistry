@@ -1,0 +1,25 @@
+@use 'sass:color';
+/* App.scss */
+$primary-color: #9498dd;
+$padding-size: 1rem;
+
+.container {
+  background-color: $primary-color;
+  padding: $padding-size;
+  border-radius: 10px;
+  color: white;
+
+  .button {
+    background-color: color.adjust($color: $primary-color, $lightness: -10%);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+    background-color: color.adjust($color: $primary-color, $lightness: 10%);
+
+    }
+  }
+}
+
