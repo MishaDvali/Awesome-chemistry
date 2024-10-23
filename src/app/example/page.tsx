@@ -1,15 +1,9 @@
-// App.js
-import React from 'react';
-import './style.scss';
+import IncrementerContainer from "./increamentor";
 
 function Page() {
-  return (
-    <div className="container">
-      <h1>Hello, Sass in React!</h1>
-      <button className="button">Click Me</button>
-    </div>
-  );
+	return <>
+		<IncrementerContainer/>
+	</>
 }
 
 export default Page;
-
