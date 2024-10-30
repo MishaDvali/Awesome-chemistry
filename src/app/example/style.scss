@@ -1,24 +1,23 @@
 @use 'sass:color';
+@use '../globals';
 /* App.scss */
-$primary-color: #9498dd;
-$padding-size: 1rem;
 
 .container {
-  background-color: $primary-color;
-  padding: $padding-size;
+  background-color: globals.$primary-color;
+  padding: globals.$padding-size;
   border-radius: 10px;
   color: white;
 
   .button {
-    background-color: color.adjust($primary-color, $lightness: -25%);
+    background-color: globals.$secondary_color;
     border: none;
     color: white;
     padding: 0.5rem 1rem;
+    margin-left: 2rem;
     cursor: pointer;
 
     &:hover {
-    background-color: color.adjust($primary-color, $lightness: -15%);
-
+    background-color: color.adjust(globals.$primary-color, $lightness: -5%);
     }
   }
 }

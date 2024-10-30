@@ -3,10 +3,11 @@
   --foreground: #171717;
 }
 
-/* // $primary_color: #2B2E4A; */
-/* // $secondary_color: #E84545; */
-/* // $secondary_color: #903749; */
-/* // $primary_color: #53354A; */
+$primary_color: #2B2E4A;
+$secondary_color: #E84545;
+$third_color: #903749;
+$fourth_color: #53354A;
+$padding-size: 1rem;
 
 @media (prefers-color-scheme: dark) {
   :root {
