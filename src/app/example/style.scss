@@ -10,14 +10,14 @@ $padding-size: 1rem;
   color: white;
 
   .button {
-    background-color: color.adjust($color: $primary-color, $lightness: -10%);
+    background-color: color.adjust($primary-color, $lightness: -25%);
     border: none;
     color: white;
     padding: 0.5rem 1rem;
     cursor: pointer;
 
     &:hover {
-    background-color: color.adjust($color: $primary-color, $lightness: 10%);
+    background-color: color.adjust($primary-color, $lightness: -15%);
 
     }
   }

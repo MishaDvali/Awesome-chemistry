@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+	sassOptions: {
+    silenceDeprecations: ["legacy-js-api"],
+  },
+	/* TODO to stop silencing warnings https://github.com/sass/dart-sass/issues/2352 */
   experimental: {
     turbo: {
       rules: {
@@ -13,6 +16,8 @@ const nextConfig: NextConfig = {
     }
 	}
 }
+
+
 
 
 export default nextConfig;
