@@ -1,0 +1,49 @@
+.periodic-table {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+  
+    .legend {
+      background-color: #d9d9d9;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      
+      p {
+        margin: 0;
+        padding: 5px;
+        border-radius: 4px;
+        &.group-1 { background-color: #ffb6c1; }
+        &.group-2 { background-color: #add8e6; }
+        &.group-3 { background-color: #98fb98; }
+      }
+    }
+  
+    .table {
+      display: grid;
+      grid-template-columns: repeat(18, 1fr);
+      grid-auto-rows: 40px;
+      gap: 4px;
+  
+      .element {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        color: black;
+  
+        &.group-1 { background-color: #ffb6c1; }
+        &.group-2 { background-color: #add8e6; }
+        &.group-13 { background-color: #98fb98; }
+
+      }
+    }
+  }
+  
