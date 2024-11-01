@@ -1,22 +1,27 @@
+$gray: #d9d9d9;
+$red: #ffb6c1;
+$blue: #add8e6;
+$green: #98fb98;
+
+
 .periodic-table {
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
   
     .legend {
-      background-color: #d9d9d9;
-      padding: 10px;
+      padding: 15px;
       border-radius: 8px;
       margin-bottom: 20px;
       font-size: 14px;
       
       p {
-        margin: 0;
+        margin: 10px;
         padding: 5px;
         border-radius: 4px;
-        &.group-1 { background-color: #ffb6c1; }
-        &.group-2 { background-color: #add8e6; }
-        &.group-3 { background-color: #98fb98; }
+        &.group-1 { background-color: $red; }
+        &.group-2 { background-color: $blue; }
+        &.group-3 { background-color: $green; }
       }
     }
   
@@ -39,9 +44,9 @@
         height: 40px;
         color: black;
   
-        &.group-1 { background-color: #ffb6c1; }
-        &.group-2 { background-color: #add8e6; }
-        &.group-13 { background-color: #98fb98; }
+        &.group-1 { background-color: $red; }
+        &.group-2 { background-color: $blue; }
+        &.group-13 { background-color: $green; }
 
       }
     }
