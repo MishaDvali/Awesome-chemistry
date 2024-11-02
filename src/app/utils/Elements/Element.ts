@@ -1,7 +1,5 @@
-import { strict } from "assert";
-
-export interface ElementInterface {
-	symbol: string
+export interface ChemicalElement {
+	symbol: string | undefined
 	group: number | undefined
 	period: number | undefined
 }
