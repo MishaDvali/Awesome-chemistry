@@ -47,12 +47,17 @@ function ParseMolecule (repr: string): [(ChemicalElement | Molecule), number][] 
 			const molecule = new Molecule(repr.slice(opening_bracket+1, closingBracket))
 
 			const start_of_the_number = closingBracket + 1;
-			let end_of_the_number = start_of_the_number+1;
+			let end_of_the_number = start_of_the_number + 1;
 
 			for (;!isNaN(Number(repr[end_of_the_number]));end_of_the_number++) {}
-			return [
-				...ParseMoleculePlainElements(repr.slice(0, opening_bracket)).map((element) => [element, 1] as [ChemicalElement, number]),
-				[molecule, Number(repr.slice(start_of_the_number, end_of_the_number))]]
+			const elements_before_brackets = ParseMoleculePlainElements(repr.slice(0, opening_bracket)).map((element) => [element, 1] as [ChemicalElement, number])
+			const elements: [ChemicalElement | Molecule, number][] = [...elements_before_brackets ]
+			if (!isNaN(Number(repr[start_of_the_number]))) {
+				elements.push([molecule, Number(repr.slice(start_of_the_number, end_of_the_number))])
+			} else {
+				elements.push([molecule, 1])
+			}
+			return elements
 		}
 
 		if (!isNaN(Number(repr[i]))) {
@@ -72,6 +77,8 @@ function ParseMolecule (repr: string): [(ChemicalElement | Molecule), number][] 
 // console.log(ParseMolecule("h2o"))
 // console.log(ParseMolecule("C2H5OH"))
 // console.log(ParseMolecule("Ag(NO3)2"))
+// console.log(ParseMolecule("(NO3)"))
+
 
 function ParseMoleculePlainElements (repr: string): (ChemicalElement | Molecule)[] {
 	if (repr.length === 0) {return []}
