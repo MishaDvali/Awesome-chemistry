@@ -3,52 +3,62 @@ $red: #ffb6c1;
 $blue: #add8e6;
 $green: #98fb98;
 
-
 .periodic-table {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-  
-    .legend {
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      
-      p {
-        margin: 10px;
-        padding: 5px;
-        border-radius: 4px;
-        &.group-1 { background-color: $red; }
-        &.group-2 { background-color: $blue; }
-        &.group-3 { background-color: $green; }
-      }
-    }
-  
-    .table {
-      display: grid;
-      grid-template-columns: repeat(18, 1fr);
-      grid-auto-rows: 40px;
-      gap: 4px;
-  
-      .element {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #333;
-        border-radius: 4px;
-        font-size: 14px;
-        padding: 10px;
-        text-align: center;
-        width: 40px;
-        height: 40px;
-        color: black;
-  
-        &.group-1 { background-color: $red; }
-        &.group-2 { background-color: $blue; }
-        &.group-13 { background-color: $green; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Вирівнювання по центру
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
 
-      }
+  .legend {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    
+    p {
+      margin: 10px;
+      padding: 5px;
+      border-radius: 4px;
+      &.group-1 { background-color: $red; }
+      &.group-2 { background-color: $blue; }
+      &.group-3 { background-color: $green; }
     }
   }
-  
+
+  .table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-auto-rows: 60px;
+
+    .element {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+      font-size: 14px;
+      padding: 5px;
+      text-align: center;
+      width: 60px;
+      height: 60px;
+      color: black;
+      cursor: pointer;
+
+      &.group-1 { background-color: $red; }
+      &.group-2 { background-color: $blue; }
+      &.group-13 { background-color: $green; }
+    }
+  }
+
+  .element-info {
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    max-width: 200px;
+    margin-top: -95px;
+  }
+}
