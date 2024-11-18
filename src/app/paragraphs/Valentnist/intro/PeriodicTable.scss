@@ -6,7 +6,7 @@ $green: #98fb98;
 .periodic-table {
   display: flex;
   flex-direction: column;
-  align-items: center; // Вирівнювання по центру
+  align-items: center;
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
@@ -59,6 +59,24 @@ $green: #98fb98;
     text-align: left;
     font-size: 16px;
     max-width: 200px;
-    margin-top: -95px;
+    transform: translateY(10px); 
+  }
+
+  .task {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: $gray;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    max-width: 600px;
+    color: black;
+
+    p {
+      cursor: pointer;
+      &:hover {
+        background-color: $gray;
+      }
+    }
   }
 }
