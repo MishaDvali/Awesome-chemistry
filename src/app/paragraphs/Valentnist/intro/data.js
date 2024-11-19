@@ -136,16 +136,15 @@ export const compounds = [
 ];
   
 export const errors = [
-    { formula: 'NaO', answer: 'Na2O' },
-    { formula: 'CaO', answer: 'CaCl2' },
-    { formula: 'PO', answer: 'P2O5' },
-    { formula: 'InS', answer: 'In2S3' },
-    { formula: 'AlCl', answer: 'AlCl3' },
-    { formula: 'ClO', answer: 'Cl2O7' },
-    { formula: 'MnS', answer: 'MnS' },
-    { formula: 'AsH', answer: 'AsH3' },
-    { formula: 'CoI', answer: 'CoI2' },
-    { formula: 'RbO', answer: 'Rb2O' },
-    { formula: 'BeCl', answer: 'BeCl2' },
+    { formula: 'Na2O', answer: 'Na2O' },
+    { formula: 'CaCl', answer: 'CaCl2' },
+    { formula: 'AlO', answer: 'Al2O3' },
+    { formula: 'KCl', answer: 'KCl' },
+    { formula: 'Al3S2', answer: 'Al2S3' },
+    { formula: 'CaO', answer: 'CaO' },
+    { formula: 'Na3N', answer: 'Na3N' },
+    { formula: 'AlCl3', answer: 'AlCl3' },
+    { formula: 'BaS', answer: 'BaS' },
+    { formula: 'MgO', answer: 'MgO' },
 ];
   

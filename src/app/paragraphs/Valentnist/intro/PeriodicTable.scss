@@ -72,11 +72,24 @@ $green: #98fb98;
     max-width: 600px;
     color: black;
 
-    p {
-      cursor: pointer;
-      &:hover {
-        background-color: $gray;
+    .question {
+      margin-bottom: 20px;
+
+      p {
+        cursor: pointer;
+        &:hover {
+          background-color: $gray;
+        }
+      }
+
+      .correct {
+        color: rgb(0, 198, 0);
+      }
+
+      .incorrect {
+        color: red;
       }
     }
   }
+
 }
