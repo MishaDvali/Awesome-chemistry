@@ -24,6 +24,42 @@ $green: #98fb98;
       &.group-1 { background-color: $red; }
       &.group-2 { background-color: $blue; }
       &.group-3 { background-color: $green; }
+    }    
+  }
+
+  .theory {
+    margin-bottom: 20px;
+    text-align: left;
+
+    p {
+      padding: 2%;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    h3 {
+      color: black;
+      margin-bottom: 10px;
+      padding: 2%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      padding: 2%;
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        color: #000;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        color: #000;
+      }
     }
   }
 
