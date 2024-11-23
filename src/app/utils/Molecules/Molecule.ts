@@ -2,39 +2,27 @@ import { isNumber } from "util";
 import { ChemicalElement } from "../Elements/Element";
 import { get_element_by_str_repr } from "../Elements/Parser";
 
-class InvalidMoleculeError extends Error {
+export class InvalidMoleculeError extends Error {
 	constructor (message: string) {
 		super(message)
 		this.name = "InvalidMoleculeError"
 	}
 }
 
-class Molecule {
+export class MoleculeClass {
 	str_rep: string;
-	parsed: [(ChemicalElement | Molecule), number][];
+	parsed: [(ChemicalElement | MoleculeClass), number][];
 
-	_valence: number | undefined
 
-	constructor (str_rep: string, valence=undefined) {
+	constructor (str_rep: string) {
 		this.str_rep = str_rep;
 		this.parsed = ParseMolecule(str_rep)
-		this._valence = valence
 	}
 
 
-	get_valece (): number | undefined {
-		if (this._valence !== undefined) {
-			return this._valence;
-		}
-		return this.CalcVal()
-	}
-
-	CalcVal (): undefined | number {
-		throw Error("Not implemented") //TODO
-	}
 }
 
-function ParseMolecule (repr: string): [(ChemicalElement | Molecule), number][] {
+function ParseMolecule (repr: string): [(ChemicalElement | MoleculeClass), number][] {
 	if (repr.length == 0) {
 		return []
 	}
@@ -44,14 +32,14 @@ function ParseMolecule (repr: string): [(ChemicalElement | Molecule), number][] 
 			const opening_bracket = i;
 			let closingBracket = opening_bracket + 1
 			for (;repr[closingBracket] != ")";closingBracket++) {}
-			const molecule = new Molecule(repr.slice(opening_bracket+1, closingBracket))
+			const molecule = new MoleculeClass(repr.slice(opening_bracket+1, closingBracket))
 
 			const start_of_the_number = closingBracket + 1;
 			let end_of_the_number = start_of_the_number + 1;
 
 			for (;!isNaN(Number(repr[end_of_the_number]));end_of_the_number++) {}
 			const elements_before_brackets = ParseMoleculePlainElements(repr.slice(0, opening_bracket)).map((element) => [element, 1] as [ChemicalElement, number])
-			const elements: [ChemicalElement | Molecule, number][] = [...elements_before_brackets ]
+			const elements: [ChemicalElement | MoleculeClass, number][] = [...elements_before_brackets ]
 			if (!isNaN(Number(repr[start_of_the_number]))) {
 				elements.push([molecule, Number(repr.slice(start_of_the_number, end_of_the_number))])
 			} else {
@@ -80,7 +68,7 @@ function ParseMolecule (repr: string): [(ChemicalElement | Molecule), number][] 
 // console.log(ParseMolecule("(NO3)"))
 
 
-function ParseMoleculePlainElements (repr: string): (ChemicalElement | Molecule)[] {
+function ParseMoleculePlainElements (repr: string): (ChemicalElement | MoleculeClass)[] {
 	if (repr.length === 0) {return []}
 	if (repr.length === 1) {
 		const possibly_element = get_element_by_str_repr(repr[0]);

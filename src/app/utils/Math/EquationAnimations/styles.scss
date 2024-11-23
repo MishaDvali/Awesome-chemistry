@@ -1,34 +1,81 @@
-.equation {
-  display: inline-flex;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  cursor: pointer; /* Indicate interactivity */
+@use "./../../../globals";
+@keyframes disappear {
+  0% {
+    transform: translateX(0%) scaleX(100%) ;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(0%);
+    opacity: 0;
+  }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.equation {
+  display: flex;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+.explainButton {
+  padding: 0.2rem;
+  background-color: globals.$secondary_color;
+  cursor: pointer; /* Indicate interactivity */
+  &:hover {
+    background-color: globals.$fourth_color;
+  }
+}
+
+.inBetweenEquations {
+  display: inline-flex;
+  margin: 0.1rem;
+}
+
+.solvedEquation {
+  width: fit-content;
+  padding: 1rem;
+  border: 5px, solid, globals.$third_color;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+}
+
+.steps {
+  padding-top: 1rem;
+  align-items: center;
+  border-top: 5px solid globals.$third_color;
+  margin-top: 20px
+}
 /* Initial State for Removable */
 .removable {
-  transition: transform 0.5s ease, opacity 100 0.5s ease;
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0);
+  animation: disappear 1s, forwards;
+  animation-delay: 1s;
 }
 
 /* Removable Hidden State */
 .hidden {
-  transform: scaleX(0);
-  opacity: 0;
   pointer-events: none; /* Prevent interaction during animation */
+  opacity: 0;
 }
 
 /* Initial State for Addition */
 .addition {
   opacity: 0;
-  transform: translateX(20px);
-  transition: transform 0.5s ease, opacity 1s ease;
+  color: rgb(0, 255, 0);
+  animation: appear 1s forwards;
+  animation-delay: 1s;
 }
 
 /* Addition Visible State */
-.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
 

@@ -1,6 +1,6 @@
-import {ElementInterface} from "./Element" 
+import { ChemicalElement } from "./Element";
 
-export const elements: {[key: string]: ElementInterface} = {
+export const elements: {[key: string]: ChemicalElement} = {
           'H': {symbol: 'H', group: 1, period: 1 },
           'He': {symbol: 'He', group: 18, period: 1 },
           'Li': { symbol: 'Li', group: 1, period: 2 },
@@ -92,3 +92,4 @@ export const elements: {[key: string]: ElementInterface} = {
           'Ts': { symbol: 'Ts', group: 17, period: 7 }, 
           'Og': { symbol: 'Og', group: 18, period: 7 },
 };
+

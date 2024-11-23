@@ -1,7 +1,7 @@
-import { ElementInterface } from "./Element";
+import { ChemicalElement } from "./Element";
 import {elements} from "./Elements"
 
-export const get_element_by_str_repr= (element: string): [ElementInterface, number] | undefined  => { 
+export const get_element_by_str_repr= (element: string): [ChemicalElement, number] | undefined  => { 
 	//returns element and amount of corrections if there is an element that matches, undefined if there is no element
 	let error_count = 0;
 	if (element.length == 0) 
