@@ -169,13 +169,13 @@ const PeriodicTable = () => {
         {selectedCompound && <p>Відpовідь: {selectedCompound.answer}</p>}
       </div>
       <div className="task">
-        <h3>Знайди pомилку і виПрав:</h3>
+        <h3>Знайди pомилку і виправ:</h3>
         {errors && errors.map((error, index) => (
           <p key={index} onClick={() => handleErrorClick(error)}>
             {error.formula}
           </p>
         ))}
-        {selectedError && <p>Відpовідь: {selectedError.answer}</p>}
+        {selectedError && <p>Відовідь: {selectedError.answer}</p>}
       </div>
       <div className="task">
         <h3>Експрес-тест</h3>

@@ -135,4 +135,4 @@ export function solve_with_steps(equation: string): SolvedEquation {
 
 }
 
-console.log(solve_with_steps("12 * 2 = x * 4"))
+// console.log(solve_with_steps("12 * 2 = x * 4"))

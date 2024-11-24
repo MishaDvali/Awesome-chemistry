@@ -9,11 +9,19 @@ const ElementNode: React.FC<{
 	element: string | ChemicalElement,
 	subScript?: number,
 	showValence?: boolean,
-	valence?: number | string}> = (props) => {
+	valence?: number | string,
+	valence_style?: object,
+	subscript_style?: object
+}> = (props) => {
 
 	// const showValennce = props.showValence? props.showValence : false
 	let valence = props.valence
+	let valenceStyle = {alignSelf: "center", fontSize:"1rem"}
+	if (props.valence_style != undefined) {
+		valenceStyle = {...valenceStyle, ...props.valence_style}
+	}
 
+	
 	const element_object = ((element: ChemicalElement | string): ChemicalElement => {
 		if (typeof props.element != "string") { return props.element}
 		const elementObjectAndError: [ChemicalElement, number] | undefined = get_element_by_str_repr(element)
@@ -27,13 +35,16 @@ const ElementNode: React.FC<{
 
 	if (props.showValence && props.valence == undefined) {
 		const newValence = get_valence(element_object)
-		valence = newValence? newValence : "?"
+		valence = newValence? number_to_roman[newValence] : "?"
 	}
 	
 	return <div style={{width: "adjust"}}>
-		{(props.showValence || props.valence) && <div style={{alignSelf: "center", fontSize:"0.8rem"}}>{number_to_roman[valence]}</div>}
+		{(props.showValence || props.valence) && <div style={valenceStyle}>{valence}</div>}
+		<div style={{display: "inline", width: "adjust"}}>
 		{elementStrRepr}
-		<sub>{props.subScript && props.subScript != 1 && props.subScript}</sub>
+		{props.subscript_style!=undefined && <sub style={props.subscript_style}>{props.subScript && props.subScript != 1 && props.subScript}</sub>}
+		{props.subscript_style==undefined && <sub>{props.subScript && props.subScript != 1 && props.subScript}</sub>}
+		</div>
 	</div>
 }
 export default ElementNode;
