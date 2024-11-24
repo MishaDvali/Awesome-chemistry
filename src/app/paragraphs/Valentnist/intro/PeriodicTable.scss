@@ -15,7 +15,7 @@ $green: #98fb98;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 0.875rem;
     
     p {
       margin: 10px;
@@ -73,7 +73,7 @@ $green: #98fb98;
       align-items: center;
       justify-content: center;
       border: 1px solid black;
-      font-size: 14px;
+      font-size: 0.875rem;
       padding: 5px;
       text-align: center;
       width: 60px;
@@ -90,12 +90,12 @@ $green: #98fb98;
   .element-info {
     position: absolute;
     background-color: #f1f1f1;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     text-align: left;
     font-size: 16px;
-    max-width: 200px;
-    transform: translateY(10px); 
+    max-width: 400px;
+    margin-top: 70%;
   }
 
   .task {
