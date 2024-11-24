@@ -5,6 +5,9 @@ export interface ChemicalElement {
 }
 
 export const get_valence = (element: ChemicalElement): number | undefined => {
+	if (element.symbol == "O") {
+		return 2
+	}
 	if (element.group == 1 || element.group == 2) {
 		return element.group
 	}

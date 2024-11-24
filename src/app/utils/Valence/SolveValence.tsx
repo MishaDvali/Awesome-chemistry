@@ -11,6 +11,8 @@ const SolveValence: React.FC<{molecule_formula: string}> = (props) => {
 	}
 
 
+	console.log(molecule.parsed[1][0])
+
 	const equation = (valence(molecule.parsed[0][0]) +
 										" * " +
 										molecule.parsed[0][1] +

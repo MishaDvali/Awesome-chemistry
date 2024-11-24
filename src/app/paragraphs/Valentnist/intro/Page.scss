@@ -42,6 +42,7 @@ $gray: #d9d9d9;
 
     .main-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 }

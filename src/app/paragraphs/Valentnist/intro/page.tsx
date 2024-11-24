@@ -2,6 +2,7 @@
 import React from 'react';
 import PeriodicTable from './PeriodicTable';
 import './Page.scss';
+import Excersise_3 from './excersise_3';
 
 const ExamplePage: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const ExamplePage: React.FC = () => {
     </div>
         <main className="main-container">
             <PeriodicTable/>
+						<Excersise_3/>
         </main>
     </div>
   );
