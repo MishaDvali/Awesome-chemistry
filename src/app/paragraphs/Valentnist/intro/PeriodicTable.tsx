@@ -48,7 +48,7 @@ const PeriodicTable = () => {
       <p>Щоб показати, як атоми сполучені в молекулі, використовують графічні (структурні) формули. Вони показують не тільки число атомів у молекулі, але й послідовність їх сполучення. Графічна формула молекули води H₂O записується так:</p>
       <p>H — O — H</p>
       <p>Валентність дорівнює числу зв'язків, які атом даного елемента утворює в молекулі. В графічних формулах зв'язки зображують лініями, тому валентність дорівнює числу ліній у графічній формулі. Деякі елементи виявляють у всіх своїх сполуках постійну валентність (наприклад, Гідроген завжди одновалентний, Оксиген — двовалентний), інші — змінну валентність. Визначити валентність можна з хімічної формули, виходячи з того, що сума валентностей усіх атомів одного елемента в сполуці дорівнює сумі валентностей усіх атомів іншого елемента в цій сполуці.</p>
-      <h3>Таблиця 4. Визначення валентності за Періодичною системою</h3>
+      <h3>Таблиця 1. Визначення валентності за Періодичною системою</h3>
       <table>
         <thead>
           <tr>
@@ -85,7 +85,7 @@ const PeriodicTable = () => {
           </tr>
         </tbody>
       </table>
-      <h3>Таблиця 5. Алгоритм складання формул бінарних сполук</h3>
+      <h3>Таблиця 2. Алгоритм складання формул бінарних сполук</h3>
       <table>
         <thead>
           <tr>
@@ -122,9 +122,9 @@ const PeriodicTable = () => {
       </table>
     </div>
       <div className="legend">
-        <p className="group-1">Груpа Ia, має сталу валентність 1</p>
-        <p className="group-2">Груpа IIa, має сталу валентність 2</p>
-        <p className="group-3">Груpа IIIa, має сталу валентність 3</p>
+        <p className="group-1">Група Ia, має сталу валентність 1</p>
+        <p className="group-2">Група IIa, має сталу валентність 2</p>
+        <p className="group-3">Група IIIa, має сталу валентність 3</p>
       </div>
       <div className="table">
         {elements && elements.map((element, index) => (
@@ -173,7 +173,7 @@ const PeriodicTable = () => {
         <h3>Знайди pомилку і виправ:</h3>
         {errors && errors.map((error, index) => (
           <p key={index} onClick={() => handleErrorClick(error)}>
-            {error.formula}
+            <MoleculeNode molecule_formula={error.formula}></MoleculeNode>
           </p>
         ))}
         {selectedError && <p>Відовідь: {selectedError.answer}</p>}
@@ -181,18 +181,18 @@ const PeriodicTable = () => {
       <div className="task">
         <h3>Експрес-тест</h3>
         <div className="question">
-          <p>1. Вкажіть Неправильно складену формулу:</p>
+          <p>1. Вкажіть неправильно складену формулу:</p>
           <p onClick={() => handleAnswer(1, 'A')} className={answers[1] === 'A' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>A) MgO</p>
           <p onClick={() => handleAnswer(1, 'Б')} className={answers[1] === 'Б' ? 'correct' : ''}>Б) KO</p>
           <p onClick={() => handleAnswer(1, 'B')} className={answers[1] === 'B' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>B) ZnO</p>
-          <p onClick={() => handleAnswer(1, 'T')} className={answers[1] === 'T' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>T) Al2O3</p>
+          <p onClick={() => handleAnswer(1, 'T')} className={answers[1] === 'T' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>T) <MoleculeNode molecule_formula='Al2O3'></MoleculeNode></p>
           {answers[1] && <p className={answers[1] === 'Б' ? 'correct' : 'incorrect'}>{answers[1] === 'Б' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
           <p>2. В якій сполуці валентність Хрому найвища?</p>
-          <p onClick={() => handleAnswer(2, 'А')} className={answers[2] === 'А' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>А) Cr2O3</p>
-          <p onClick={() => handleAnswer(2, 'Б')} className={answers[2] === 'Б' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>Б) CrO</p>
-          <p onClick={() => handleAnswer(2, 'B')} className={answers[2] === 'B' ? 'correct' : ''}>B) CrO3</p>
+          <p onClick={() => handleAnswer(2, 'А')} className={answers[2] === 'А' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>А) <MoleculeNode molecule_formula='Cr2O3'></MoleculeNode></p>
+          <p onClick={() => handleAnswer(2, 'Б')} className={answers[2] === 'Б' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>Б) <MoleculeNode molecule_formula='CrO'></MoleculeNode></p>
+          <p onClick={() => handleAnswer(2, 'B')} className={answers[2] === 'B' ? 'correct' : ''}>B) <MoleculeNode molecule_formula='CrO3'></MoleculeNode></p>
           {answers[2] && <p className={answers[2] === 'B' ? 'correct' : 'incorrect'}>{answers[2] === 'B' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
