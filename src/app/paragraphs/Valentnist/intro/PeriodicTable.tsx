@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './PeriodicTable.scss';
 import { elements, compounds, errors } from './data';
+import MoleculeNode from '@/app/utils/Molecules/Node';
 
 const PeriodicTable = () => {
   const [selectedElement, setSelectedElement] = useState(null);
@@ -163,7 +164,7 @@ const PeriodicTable = () => {
         <h3>Визначіть валентність елементів у бінарних сполуках:</h3>
         {compounds && compounds.map((compound, index) => (
           <p key={index} onClick={() => handleCompoundClick(compound)}>
-            {compound.formula}
+            <MoleculeNode molecule_formula={compound.formula} showValence={true}></MoleculeNode>
           </p>
         ))}
         {selectedCompound && <p>Відpовідь: {selectedCompound.answer}</p>}
