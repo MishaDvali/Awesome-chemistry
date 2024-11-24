@@ -124,7 +124,7 @@ export const compounds = [
     { formula: 'H2S', answer: 'Валентність H: 1, S: 2' },
     { formula: 'BaO', answer: 'Валентність Ba: 2, O: 2' },
     { formula: 'As2O5', answer: 'Валентність As: 5, O: 2' },
-    { formula: 'Nal', answer: 'Валентність Na: 1, I: 1' },
+    { formula: 'NaI', answer: 'Валентність Na: 1, I: 1' },
     { formula: 'SrCl', answer: 'Валентність Sr: 2, Cl: 1' },
     { formula: 'B2O3', answer: 'Валентність B: 3, O: 2' },
     { formula: 'CO2', answer: 'Валентність C: 4, O: 2' },
