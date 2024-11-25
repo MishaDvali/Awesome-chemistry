@@ -16,6 +16,7 @@ const ElementNode: React.FC<{
 
 	// const showValennce = props.showValence? props.showValence : false
 	let valence = props.valence
+
 	let valenceStyle = {alignSelf: "center", fontSize:"1rem"}
 	if (props.valence_style != undefined) {
 		valenceStyle = {...valenceStyle, ...props.valence_style}
@@ -33,9 +34,13 @@ const ElementNode: React.FC<{
 
 	const elementStrRepr = element_object.symbol;
 
-	if (props.showValence && props.valence == undefined) {
+	if (props.showValence) {
+		if (props.valence==undefined) {
 		const newValence = get_valence(element_object)
 		valence = newValence? number_to_roman[newValence] : "?"
+		} else {
+		valence = number_to_roman[valence]
+		}
 	}
 	
 	return <div style={{width: "adjust"}}>

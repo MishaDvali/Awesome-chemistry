@@ -3,7 +3,7 @@ import './Page.scss';
 
 const ExamplePage: React.FC = () => {
   return (
- );
+  );
 };
 
 export default ExamplePage;
