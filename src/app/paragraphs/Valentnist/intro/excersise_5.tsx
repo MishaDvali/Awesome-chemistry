@@ -21,6 +21,7 @@ const Excersise_5: React.FC = (props) => {
 
   return (
 		 <div className="description" style={{ display: "inline", gap: "20px" }}>
+		 <h3>Складіть формули та зазначте валентність елементів в них. Натисніть на елементи, щоб перевірити себе<br/></h3>
       {molecules.map((molecule_info, index) => (
         <div key={index} style={{ display: "inline-block", margin: "10px" }}>
           {/* Conditionally render the molecule based on its clicked state */}
