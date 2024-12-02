@@ -140,7 +140,6 @@ const PeriodicTable = () => {
             }}
             onClick={(event) => handleClick(element, event)}
           >
-            {element.symbol}
           </div>
         ))}
       </div>
@@ -165,7 +164,7 @@ const PeriodicTable = () => {
         {compounds && compounds.map((compound, index) => (
           <div key={index} className="compound-task">
             <p onClick={() => handleCompoundClick(compound)}>
-              {compound.formula}
+              <MoleculeNode molecule_formula={compound.formula}/>
             </p>
             {selectedCompound && selectedCompound.formula === compound.formula && (
               <p className="answer">Відповідь: {selectedCompound.answer}</p>
