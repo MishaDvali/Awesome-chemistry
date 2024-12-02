@@ -163,20 +163,30 @@ const PeriodicTable = () => {
       <div className="task">
         <h3>Визначіть валентність елементів у бінарних сполуках:</h3>
         {compounds && compounds.map((compound, index) => (
-          <p key={index} onClick={() => handleCompoundClick(compound)}>
-            <MoleculeNode molecule_formula={compound.formula} showValence={true}></MoleculeNode>
-          </p>
+          <div key={index} className="compound-task">
+            <p onClick={() => handleCompoundClick(compound)}>
+              {compound.formula}
+            </p>
+            {selectedCompound && selectedCompound.formula === compound.formula && (
+              <p className="answer">Відповідь: {selectedCompound.answer}</p>
+            )}
+          </div>
         ))}
-        {selectedCompound && <p>Відpовідь: {selectedCompound.answer}</p>}
       </div>
       <div className="task">
-        <h3>Знайди pомилку і виправ:</h3>
+        <h3>Знайди помилку і виправ:</h3>
         {errors && errors.map((error, index) => (
-          <p key={index} onClick={() => handleErrorClick(error)}>
-            <MoleculeNode molecule_formula={error.formula}></MoleculeNode>
-          </p>
+          <div key={index} className="error-task">
+            <p onClick={() => handleErrorClick(error)}>
+              <MoleculeNode molecule_formula={error.formula}></MoleculeNode>
+            </p>
+            {selectedError && selectedError.formula === error.formula && (
+              <div className="answer">
+                Відповідь: <MoleculeNode molecule_formula={selectedError.answer}></MoleculeNode>
+              </div>
+            )}
+          </div>
         ))}
-        {selectedError && <p>Відовідь: {selectedError.answer}</p>}
       </div>
       <div className="task">
         <h3>Експрес-тест</h3>
@@ -185,7 +195,7 @@ const PeriodicTable = () => {
           <p onClick={() => handleAnswer(1, 'A')} className={answers[1] === 'A' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>A) MgO</p>
           <p onClick={() => handleAnswer(1, 'Б')} className={answers[1] === 'Б' ? 'correct' : ''}>Б) KO</p>
           <p onClick={() => handleAnswer(1, 'B')} className={answers[1] === 'B' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>B) ZnO</p>
-          <p onClick={() => handleAnswer(1, 'T')} className={answers[1] === 'T' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>T) <MoleculeNode molecule_formula='Al2O3'></MoleculeNode></p>
+          <p onClick={() => handleAnswer(1, 'Г')} className={answers[1] === 'Г' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>Г) <MoleculeNode molecule_formula='Al2O3'></MoleculeNode></p>
           {answers[1] && <p className={answers[1] === 'Б' ? 'correct' : 'incorrect'}>{answers[1] === 'Б' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
@@ -200,7 +210,7 @@ const PeriodicTable = () => {
           <p onClick={() => handleAnswer(3, 'A')} className={answers[3] === 'A' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>A) Mg, Fe, Zn</p>
           <p onClick={() => handleAnswer(3, 'Б')} className={answers[3] === 'Б' ? 'correct' : ''}>Б) Al, Fe, Cr</p>
           <p onClick={() => handleAnswer(3, 'B')} className={answers[3] === 'B' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>B) Cr, K, Al</p>
-          <p onClick={() => handleAnswer(3, 'T')} className={answers[3] === 'T' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>T) Al, Na, Zn</p>
+          <p onClick={() => handleAnswer(3, 'Г')} className={answers[3] === 'Г' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>Г) Al, Na, Zn</p>
           {answers[3] && <p className={answers[3] === 'Б' ? 'correct' : 'incorrect'}>{answers[3] === 'Б' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">

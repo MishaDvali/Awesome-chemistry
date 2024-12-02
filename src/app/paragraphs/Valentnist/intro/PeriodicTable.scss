@@ -18,7 +18,7 @@ $green: #98fb98;
     font-size: 0.875rem;
     
     p {
-      margin: 10px;
+      margin: 0.625rem;
       padding: 5px;
       border-radius: 4px;
       &.group-1 { background-color: $red; }
@@ -33,13 +33,13 @@ $green: #98fb98;
 
     p {
       padding: 2%;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
       line-height: 1.6;
     }
 
     h3 {
       color: black;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
       padding: 2%;
     }
 
@@ -95,7 +95,7 @@ $green: #98fb98;
     text-align: left;
     font-size: 16px;
     max-width: 400px;
-    margin-top: 48%;
+    margin-top: 79%;
   }
 
   .task {
@@ -127,5 +127,86 @@ $green: #98fb98;
       }
     }
   }
+
+@media (max-width: 768px) {
+  .periodic-table {
+    padding: 0.625rem;
+  }
+
+  .table {
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 30px;
+
+    .element {
+      font-size:  0.75rem;
+      width: 30px;
+      height: 30px;
+
+      .element-info {
+        font-size:  0.75rem;
+        padding: 5px;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .legend {
+    font-size: 0.75rem;
+
+    p {
+      margin: 5px;
+      padding: 0.188rem;
+    }
+  }
+
+  .theory {
+    p {
+      font-size:  0.875rem;
+      text-align: justify;
+    }
+
+    table th, table td {
+      padding: 5px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 25px;
+
+    .element {
+      font-size: 0.625rem;
+      width: 25px;
+      height: 25px;
+
+      .element-info {
+        font-size: 0.625rem;
+        padding: 0.188rem;
+        max-width: 120px;
+      }
+    }
+  }
+
+  .legend {
+    font-size: 0.625rem;
+
+    p {
+      margin: 0.188rem;
+      padding: 0.125rem;
+    }
+  }
+
+  .theory {
+    p {
+      font-size:  0.75rem;
+    }
+
+    table th, table td {
+      padding: 0.188rem;
+    }
+  }
+}
 
 }
