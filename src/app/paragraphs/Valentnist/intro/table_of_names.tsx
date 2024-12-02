@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import PeriodicTable from './PeriodicTable';
 import './Page.scss';
 
-const ChemicalTable: React.FC<> = ({}) => {
+const ChemicalTable: React.FC = ({}) => {
 	const data = [
-		["O", -2, "оксид", "BaO", "барій два оксид"],
+		["O", -2, "оксид", "BaO", "барій оксид"],
 		["S", -2, "сульфід", "CaS", "калій сульфід"],
 		["F", -1, "фторид", "FeF3", "ферум три фторид"],
 		["Cl", -1, "хлорид", "SrCl2", "стронцій хлорид"],
