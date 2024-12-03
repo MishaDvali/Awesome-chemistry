@@ -47,7 +47,7 @@ const Excersise_3: React.FC = () => {
       {showSolutionA && (
         <div className="solution">
           <h3>{isCorrectA ? "Правильно" : "Неправильно!"}</h3>
-					{selectedAnswerA!="Al2O3" && <SolveValence key={selectedAnswerA} molecule_formula={selectedAnswerA || "Натисніть на формулу щоб перевірити себе!"} />}
+					{selectedAnswerA!="Al2O3" && selectedAnswerA !="PCl5"&& <SolveValence key={selectedAnswerA} molecule_formula={selectedAnswerA || "Натисніть на формулу щоб перевірити себе!"} />}
 					{selectedAnswerA=="Al2O3" && <MoleculeNode molecule_formula={selectedAnswerA} showValence={true}/>}
           
         </div>

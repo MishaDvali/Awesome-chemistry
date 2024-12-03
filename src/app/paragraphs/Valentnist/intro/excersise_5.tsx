@@ -35,6 +35,9 @@ const Excersise_5: React.FC = (props) => {
           )}
           {clickedMolecule[molecule_info[0]] && (
             <div style={{ display: "inline-block" }}>
+							
+              <MoleculeNode molecule_formula={molecule_info[0]} />
+							Складена формула:
               <MoleculeNode
                 molecule_formula={molecule_info[1]}
                 showValence={true}
