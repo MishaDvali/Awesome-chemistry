@@ -140,6 +140,7 @@ const PeriodicTable = () => {
             }}
             onClick={(event) => handleClick(element, event)}
           >
+					{element.symbol}
           </div>
         ))}
       </div>

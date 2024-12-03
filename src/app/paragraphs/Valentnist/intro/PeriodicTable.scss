@@ -129,6 +129,10 @@ $green: #98fb98;
   }
 
 @media (max-width: 768px) {
+  .task {
+    max-width: 70%
+  }
+
   .periodic-table {
     padding: 0.625rem;
   }
@@ -172,6 +176,10 @@ $green: #98fb98;
 }
 
 @media (max-width: 480px) {
+  .task {
+    max-width: 70%
+  }
+
   .table {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 25px;
