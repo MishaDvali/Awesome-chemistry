@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 const Excersise_5: React.FC = (props) => {
 	const molecules = [["Na2O","Na2O", 1, 2],
-	["CaCl", "CaCl2", 2, 1],["AlCl", "Al2O3", 3, 2], ["KCl", "KCl", 1, 1], ["Al3S2", "Al2S3", 3, 2], ["CaO", "CaO", 2, 2], ["Na3N", "Na3N", 1, 3], ["AlCl3", "AlCl3", 3, 1], ["BaS", "BaS", 2, 2], ["MgO", "MgO", 2, 2]
+	["CaCl", "CaCl2", 2, 1],["AlO", "Al2O3", 3, 2], ["KCl", "KCl", 1, 1], ["Al3S2", "Al2S3", 3, 2], ["CaO", "CaO", 2, 2], ["Na3N", "Na3N", 1, 3], ["AlCl3", "AlCl3", 3, 1], ["BaS", "BaS", 2, 2], ["MgO", "MgO", 2, 2]
 
 
 	]
