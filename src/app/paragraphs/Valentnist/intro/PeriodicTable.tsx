@@ -72,8 +72,6 @@ const PeriodicTable = () => {
             <td>V</td>
             <td>VI</td>
             <td>VII</td>
-          </tr>
-          <tr>
             <td>Можливі валентності</td>
             <td>I</td>
             <td>II</td>
