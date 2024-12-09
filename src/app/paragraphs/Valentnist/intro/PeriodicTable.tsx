@@ -48,7 +48,7 @@ const PeriodicTable = () => {
       <p>Щоб показати, як атоми сполучені в молекулі, використовують графічні (структурні) формули. Вони показують не тільки число атомів у молекулі, але й послідовність їх сполучення. Графічна формула молекули води H₂O записується так:</p>
       <p>H — O — H</p>
       <p>Валентність дорівнює числу зв'язків, які атом даного елемента утворює в молекулі. В графічних формулах зв'язки зображують лініями, тому валентність дорівнює числу ліній у графічній формулі. Деякі елементи виявляють у всіх своїх сполуках постійну валентність (наприклад, Гідроген завжди одновалентний, Оксиген — двовалентний), інші — змінну валентність. Визначити валентність можна з хімічної формули, виходячи з того, що сума валентностей усіх атомів одного елемента в сполуці дорівнює сумі валентностей усіх атомів іншого елемента в цій сполуці.</p>
-      <h3>Таблиця 1. Визначення валентності за Періодичною системою</h3>
+      <h3>Таблиця I. Визначення валентності за Періодичною системою</h3>
       <table>
         <thead>
           <tr>
@@ -85,7 +85,7 @@ const PeriodicTable = () => {
           </tr>
         </tbody>
       </table>
-      <h3>Таблиця 2. Алгоритм складання формул бінарних сполук</h3>
+      <h3>Таблиця II. Алгоритм складання формул бінарних сполук</h3>
       <table>
         <thead>
           <tr>
@@ -95,25 +95,25 @@ const PeriodicTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>1. Записуємо символи елементів у необхідному порядку та позначаємо їхню валентність</td>
+            <td>I. Записуємо символи елементів у необхідному порядку та позначаємо їхню валентність</td>
             <td>III Al II O</td>
             <td>VI S I F</td>
             <td>IV C II S</td>
           </tr>
           <tr>
-            <td>2. Знаходимо найменше спільне кратне (НСK) для значень валентностей елементів</td>
+            <td>II. Знаходимо найменше спільне кратне (НСK) для значень валентностей елементів</td>
             <td>НСK (III і II) = 6</td>
             <td>НСK (VI і I) = 6</td>
             <td>НСK (IV і II) = 4</td>
           </tr>
           <tr>
-            <td>3. Число атомів певного елемента дорівнює відношенню НСК до валентності цього елемента</td>
+            <td>III. Число атомів певного елемента дорівнює відношенню НСК до валентності цього елемента</td>
             <td>6 : III = 2 (Al) 6 : II = 3 (O)</td>
             <td>6 : VI = 1 (S) 6 : I = 6 (F)</td>
             <td>4 : IV = 1 (C) 4 : II = 2 (S)</td>
           </tr>
           <tr>
-            <td>4. Записуємо отримані індекси після символів елементів</td>
+            <td>VI. Записуємо отримані індекси після символів елементів</td>
             <td>III II Al₂O₃</td>
             <td>VI I SF₆</td>
             <td>IV II CS₂</td>
@@ -122,9 +122,9 @@ const PeriodicTable = () => {
       </table>
     </div>
       <div className="legend">
-        <p className="group-1">Група Ia, має сталу валентність 1</p>
-        <p className="group-2">Група IIa, має сталу валентність 2</p>
-        <p className="group-3">Група IIIa, має сталу валентність 3</p>
+        <p className="group-1">Група Ia, має сталу валентність I</p>
+        <p className="group-2">Група IIa, має сталу валентність II</p>
+        <p className="group-3">Група IIIa, має сталу валентність III</p>
       </div>
       <div className="table">
         {elements && elements.map((element, index) => (
@@ -191,7 +191,7 @@ const PeriodicTable = () => {
       <div className="task">
         <h3>Експрес-тест</h3>
         <div className="question">
-          <p>1. Вкажіть неправильно складену формулу:</p>
+          <p>I. Вкажіть неправильно складену формулу:</p>
           <p onClick={() => handleAnswer(1, 'A')} className={answers[1] === 'A' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>A) MgO</p>
           <p onClick={() => handleAnswer(1, 'Б')} className={answers[1] === 'Б' ? 'correct' : ''}>Б) KO</p>
           <p onClick={() => handleAnswer(1, 'B')} className={answers[1] === 'B' ? (answers[1] === 'Б' ? 'correct' : 'incorrect') : ''}>B) ZnO</p>
@@ -199,14 +199,14 @@ const PeriodicTable = () => {
           {answers[1] && <p className={answers[1] === 'Б' ? 'correct' : 'incorrect'}>{answers[1] === 'Б' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
-          <p>2. В якій сполуці валентність Хрому найвища?</p>
+          <p>II. В якій сполуці валентність Хрому найвища?</p>
           <p onClick={() => handleAnswer(2, 'А')} className={answers[2] === 'А' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>А) <MoleculeNode molecule_formula='Cr2O3'></MoleculeNode></p>
           <p onClick={() => handleAnswer(2, 'Б')} className={answers[2] === 'Б' ? (answers[2] === 'B' ? 'correct' : 'incorrect') : ''}>Б) <MoleculeNode molecule_formula='CrO'></MoleculeNode></p>
           <p onClick={() => handleAnswer(2, 'B')} className={answers[2] === 'B' ? 'correct' : ''}>B) <MoleculeNode molecule_formula='CrO3'></MoleculeNode></p>
           {answers[2] && <p className={answers[2] === 'B' ? 'correct' : 'incorrect'}>{answers[2] === 'B' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
-          <p>3. Вкажіть групу, в якій усі метали можуть виявляти у сполуках валентність III:</p>
+          <p>III. Вкажіть групу, в якій усі метали можуть виявляти у сполуках валентність III:</p>
           <p onClick={() => handleAnswer(3, 'A')} className={answers[3] === 'A' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>A) Mg, Fe, Zn</p>
           <p onClick={() => handleAnswer(3, 'Б')} className={answers[3] === 'Б' ? 'correct' : ''}>Б) Al, Fe, Cr</p>
           <p onClick={() => handleAnswer(3, 'B')} className={answers[3] === 'B' ? (answers[3] === 'Б' ? 'correct' : 'incorrect') : ''}>B) Cr, K, Al</p>
@@ -214,7 +214,7 @@ const PeriodicTable = () => {
           {answers[3] && <p className={answers[3] === 'Б' ? 'correct' : 'incorrect'}>{answers[3] === 'Б' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
-          <p>4. Вкажіть групу, яка містить лише одновалентні хімічні елементи:</p>
+          <p>VI. Вкажіть групу, яка містить лише одновалентні хімічні елементи:</p>
           <p onClick={() => handleAnswer(4, 'A')} className={answers[4] === 'A' ? (answers[4] === 'B' ? 'correct' : 'incorrect') : ''}>A) Mg, Ca, K</p>
           <p onClick={() => handleAnswer(4, 'Б')} className={answers[4] === 'Б' ? (answers[4] === 'B' ? 'correct' : 'incorrect') : ''}>Б) O, H, Cl</p>
           <p onClick={() => handleAnswer(4, 'B')} className={answers[4] === 'B' ? 'correct' : ''}>B) H, Na, K</p>
@@ -222,7 +222,7 @@ const PeriodicTable = () => {
           {answers[4] && <p className={answers[4] === 'B' ? 'correct' : 'incorrect'}>{answers[4] === 'B' ? 'Правильно' : 'Неправильно'}</p>}
         </div>
         <div className="question">
-          <p>5. До хімічних елементів, які виявляють сталу валентність, належать:</p>
+          <p>V. До хімічних елементів, які виявляють сталу валентність, належать:</p>
           <p onClick={() => handleAnswer(5, 'A')} className={answers[5] === 'A' ? (answers[5] === 'Г' ? 'correct' : 'incorrect') : ''}>A) H, P</p>
           <p onClick={() => handleAnswer(5, 'Б')} className={answers[5] === 'Б' ? (answers[5] === 'Г' ? 'correct' : 'incorrect') : ''}>Б) С, О</p>
           <p onClick={() => handleAnswer(5, 'B')} className={answers[5] === 'B' ? (answers[5] === 'Г' ? 'correct' : 'incorrect') : ''}>B) K, S</p>
@@ -232,7 +232,7 @@ const PeriodicTable = () => {
       </div>
     </div>
     
-  );
+  ); 
 };
 
 export default PeriodicTable;

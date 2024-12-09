@@ -121,18 +121,18 @@ export const elements = [
   
   
 export const compounds = [
-    { formula: 'H2S', answer: 'Валентність H: 1, S: 2' },
-    { formula: 'BaO', answer: 'Валентність Ba: 2, O: 2' },
-    { formula: 'As2O5', answer: 'Валентність As: 5, O: 2' },
-    { formula: 'NaI', answer: 'Валентність Na: 1, I: 1' },
-    { formula: 'SrCl', answer: 'Валентність Sr: 2, Cl: 1' },
-    { formula: 'B2O3', answer: 'Валентність B: 3, O: 2' },
-    { formula: 'CO2', answer: 'Валентність C: 4, O: 2' },
-    { formula: 'K2S', answer: 'Валентність K: 1, S: 2' },
-    { formula: 'PH3', answer: 'Валентність P: 3, H: 1' },
-    { formula: 'Br2O3', answer: 'Валентність Br: 3, O: 2' },
-    { formula: 'BaCl2', answer: 'Валентність Ba: 2, Cl: 1' },
-    { formula: 'Sb2O5', answer: 'Валентність Sb: 5, O: 2' },
+    { formula: 'H2S', answer: 'Валентність H: I, S: II' },
+    { formula: 'BaO', answer: 'Валентність Ba: II, O: II' },
+    { formula: 'As2O5', answer: 'Валентність As: V, O: II' },
+    { formula: 'NaI', answer: 'Валентність Na: I, I: I' },
+    { formula: 'SrCl', answer: 'Валентність Sr: II, Cl: I' },
+    { formula: 'B2O3', answer: 'Валентність B: III, O: II' },
+    { formula: 'CO2', answer: 'Валентність C: IV, O: II' },
+    { formula: 'K2S', answer: 'Валентність K: I, S: II' },
+    { formula: 'PH3', answer: 'Валентність P: III, H: I' },
+    { formula: 'Br2O3', answer: 'Валентність Br: III, O: II' },
+    { formula: 'BaCl2', answer: 'Валентність Ba: II, Cl: I' },
+    { formula: 'Sb2O5', answer: 'Валентність Sb: V, O: II' },
 ];
   
 export const errors = [
