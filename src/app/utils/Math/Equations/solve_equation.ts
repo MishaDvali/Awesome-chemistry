@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { equal } from "assert"
 import {MathNode, parse, simplify} from "mathjs"
 

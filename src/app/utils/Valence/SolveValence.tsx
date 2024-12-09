@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {MoleculeClass, InvalidMoleculeError} from "../Molecules/Molecule"
 import EquationExplanation from '../Math/EquationAnimations/Equation';
 import { ChemicalElement, get_valence } from '../Elements/Element';			

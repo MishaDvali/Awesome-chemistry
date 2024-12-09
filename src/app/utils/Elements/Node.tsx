@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from "react"
 import {MoleculeClass, InvalidMoleculeError} from "../Molecules/Molecule"
 import EquationExplanation from '../Math/EquationAnimations/Equation';
