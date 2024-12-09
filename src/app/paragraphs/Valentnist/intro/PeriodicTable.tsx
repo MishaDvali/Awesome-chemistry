@@ -72,7 +72,9 @@ const PeriodicTable = () => {
             <td>V</td>
             <td>VI</td>
             <td>VII</td>
-            <td>Можливі валентності</td>
+					</tr>
+          <tr>
+						<td>Можливі валентності</td>
             <td>I</td>
             <td>II</td>
             <td>III</td>
@@ -94,9 +96,9 @@ const PeriodicTable = () => {
         <tbody>
           <tr>
             <td>I. Записуємо символи елементів у необхідному порядку та позначаємо їхню валентність</td>
-            <td>III Al II O</td>
-            <td>VI S I F</td>
-            <td>IV C II S</td>
+            <td><MoleculeNode molecule_formula={"AlO"} valences={["III", "II"]}/></td>
+            <td><MoleculeNode molecule_formula={"SF"} valences={["I", "I"]}/></td>
+            <td><div style={{"display":"inline-flex"}}><div style={{"marginRight":"4px"}}>IV<br/>C</div><div>II<br/>S</div></div></td>
           </tr>
           <tr>
             <td>II. Знаходимо найменше спільне кратне (НСK) для значень валентностей елементів</td>
@@ -132,8 +134,8 @@ const PeriodicTable = () => {
             style={{
               gridColumnStart: element.colStart,
               gridRowStart: element.rowStart,
-              ...lightUp("#ffb6c1", element.group === 1),
-              ...lightUp("#add8e6", element.group === 2),
+              ...lightUp("#ffb6c1", element.group === 1 || element.symbol == "F"),
+              ...lightUp("#add8e6", element.group === 2 || element.symbol == "O"),
               ...lightUp("#98fb98", element.group === 13),
             }}
             onClick={(event) => handleClick(element, event)}
@@ -151,8 +153,8 @@ const PeriodicTable = () => {
             transform: 'translateX(-50%)',
           }}
         >
-          <p>Елемент: {selectedElement.symbol}</p>
-          <p>pеріод: {selectedElement.period}</p>
+          <p>Елемент: {selectedElement?.symbol}</p>
+          <p>pеріод: {selectedElement?.period}</p>
           <p>Стала валентність: {selectedElement.valence}</p>
           <p>Молярная маса: {selectedElement.atomicMass}</p>
           <p>Номер: {selectedElement.atomicNumber}</p>
@@ -163,7 +165,9 @@ const PeriodicTable = () => {
         {compounds && compounds.map((compound, index) => (
           <div key={index} className="compound-task">
             <p onClick={() => handleCompoundClick(compound)}>
-              <MoleculeNode molecule_formula={compound.formula}/>
+						{compound.formula!="CO2" && <MoleculeNode molecule_formula={compound.formula}/>}
+						{compound.formula=="CO2" && <span>CO<sub>2</sub></span>}
+            
             </p>
             {selectedCompound && selectedCompound.formula === compound.formula && (
               <p className="answer">Відповідь: {selectedCompound.answer}</p>

@@ -27,21 +27,21 @@ const Excersise_5: React.FC = (props) => {
           {/* Conditionally render the molecule based on its clicked state */}
           {!clickedMolecule[molecule_info[0]] && (
             <div
-              onClick={() => handleClick(molecule_info[0])}
+              onClick={() => handleClick(molecule_info[0] as string)}
               style={{ cursor: "pointer", display: "inline-block" }}
             >
-              <MoleculeNode molecule_formula={molecule_info[0]} />
+              <MoleculeNode molecule_formula={molecule_info[0] as string} />
             </div>
           )}
           {clickedMolecule[molecule_info[0]] && (
             <div style={{ display: "inline-block" }}>
 							
-              <MoleculeNode molecule_formula={molecule_info[0]} />
+              <MoleculeNode molecule_formula={molecule_info[0] as string} />
 							Складена формула:
               <MoleculeNode
-                molecule_formula={molecule_info[1]}
+                molecule_formula={molecule_info[1] as string}
                 showValence={true}
-                valences={[molecule_info[2], molecule_info[3]]}
+                valences={[molecule_info[2] as number, molecule_info[3] as number]}
               />
             </div>
           )}
