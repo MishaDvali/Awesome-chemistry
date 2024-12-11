@@ -7,58 +7,56 @@ $green: #98fb98;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 90%;
+  margin: 2% auto;
+  padding: 2%;
 
   .legend {
-    padding: 15px;
+    padding: 2%;
     border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 0.875rem;
-    
+    margin-bottom: 2%;
+    font-size: 1rem;
+
     p {
-      margin: 0.625rem;
-      padding: 5px;
+      margin: 1%;
+      padding: 1%;
       border-radius: 4px;
       &.group-1 { background-color: $red; }
       &.group-2 { background-color: $blue; }
       &.group-3 { background-color: $green; }
-    }    
+    }
   }
 
   .theory {
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     text-align: left;
 
     p {
       padding: 2%;
-      margin-bottom: 0.625rem;
+      margin-bottom: 1%;
       line-height: 1.6;
+      font-size: 1rem;
     }
 
     h3 {
       color: black;
-      margin-bottom: 0.625rem;
-      padding: 2%;
+      margin-bottom: 1%;
+      padding: 1%;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
-      padding: 2%;
 
       th, td {
         border: 1px solid black;
-        padding: 8px;
+        padding: 2%;
         text-align: center;
         color: #000;
       }
 
       th {
         background-color: #f2f2f2;
-        color: #000;
       }
     }
   }
@@ -66,20 +64,20 @@ $green: #98fb98;
   .table {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    grid-auto-rows: 60px;
+    grid-auto-rows: 6%;
+    gap: 2%;
 
     .element {
       display: flex;
       align-items: center;
       justify-content: center;
       border: 1px solid black;
-      font-size: 0.875rem;
-      padding: 5px;
+      font-size: 1rem;
       text-align: center;
-      width: 60px;
-      height: 60px;
+      padding: 1%;
       color: black;
       cursor: pointer;
+      border-radius: 4px;
 
       &.group-1 { background-color: $red; }
       &.group-2 { background-color: $blue; }
@@ -90,26 +88,25 @@ $green: #98fb98;
   .element-info {
     position: absolute;
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 2%;
     border-radius: 8px;
     text-align: left;
-    font-size: 16px;
-    max-width: 400px;
-    margin-top: 79%;
+    font-size: 1rem;
+    max-width: 80%;
   }
 
   .task {
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 5%;
+    padding: 2%;
     background-color: $gray;
     border-radius: 8px;
     text-align: left;
-    font-size: 16px;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 90%;
     color: black;
 
     .question {
-      margin-bottom: 20px;
+      margin-bottom: 2%;
 
       p {
         cursor: pointer;
@@ -118,103 +115,37 @@ $green: #98fb98;
         }
       }
 
-      .correct {
-        color: rgb(0, 198, 0);
-      }
-
-      .incorrect {
-        color: red;
-      }
+      .correct { color: rgb(0, 198, 0); }
+      .incorrect { color: red; }
     }
   }
 
-@media (max-width: 768px) {
-  .task {
-    max-width: 70%
-  }
+  @media (max-width: 768px) {
+    .table {
+      grid-template-columns: repeat(9, 1fr);
+      grid-auto-rows: 8%;
+      gap: 1%;
 
-  .periodic-table {
-    padding: 0.625rem;
-  }
-
-  .table {
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: 30px;
-
-    .element {
-      font-size:  0.75rem;
-      width: 30px;
-      height: 30px;
-
-      .element-info {
-        font-size:  0.75rem;
-        padding: 5px;
-        max-width: 150px;
+      .element {
+        font-size: 0.75rem;
       }
     }
+
+    .element-info { font-size: 0.875rem; }
+    .legend, .task { font-size: 0.875rem; }
   }
 
-  .legend {
-    font-size: 0.75rem;
+  @media (max-width: 480px) {
+    .table {
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 10%;
 
-    p {
-      margin: 5px;
-      padding: 0.188rem;
-    }
-  }
-
-  .theory {
-    p {
-      font-size:  0.875rem;
-      text-align: justify;
-    }
-
-    table th, table td {
-      padding: 5px;
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .task {
-    max-width: 70%
-  }
-
-  .table {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 25px;
-
-    .element {
-      font-size: 0.625rem;
-      width: 25px;
-      height: 25px;
-
-      .element-info {
+      .element {
         font-size: 0.625rem;
-        padding: 0.188rem;
-        max-width: 120px;
       }
     }
+
+    .element-info { font-size: 0.75rem; }
+    .legend, .task { font-size: 0.75rem; }
   }
-
-  .legend {
-    font-size: 0.625rem;
-
-    p {
-      margin: 0.188rem;
-      padding: 0.125rem;
-    }
-  }
-
-  .theory {
-    p {
-      font-size:  0.75rem;
-    }
-
-    table th, table td {
-      padding: 0.188rem;
-    }
-  }
-}
-
 }

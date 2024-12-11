@@ -155,7 +155,7 @@ const PeriodicTable = () => {
           }}
         >
           <p>Елемент: {selectedElement?.symbol}</p>
-          <p>pеріод: {selectedElement?.period}</p>
+          <p>Період: {selectedElement?.period}</p>
           <p>Стала валентність: {selectedElement.valence}</p>
           <p>Молярная маса: {selectedElement.atomicMass}</p>
           <p>Номер: {selectedElement.atomicNumber}</p>
