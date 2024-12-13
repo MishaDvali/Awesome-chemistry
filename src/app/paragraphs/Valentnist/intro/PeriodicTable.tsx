@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import './PeriodicTable.scss';
 import { elements, compounds, errors } from './data';
 import MoleculeNode from '@/app/utils/Molecules/Node';
+import Excersise_5 from './excersise_5';
 
 const PeriodicTable = () => {
   const [selectedElement, setSelectedElement] = useState(null);
@@ -162,7 +163,7 @@ const PeriodicTable = () => {
         </div>
       )}
 
-			<Excersise_5/>
+			<Excercise_5/>
       <div className="task">
         <h3>Визначіть валентність елементів у бінарних сполуках:</h3>
         {compounds && compounds.map((compound, index) => (

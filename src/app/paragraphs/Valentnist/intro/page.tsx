@@ -3,7 +3,6 @@ import React from 'react';
 import PeriodicTable from './PeriodicTable';
 import './Page.scss';
 import Excersise_3 from './excersise_3';
-import Excersise_5 from './excersise_5';
 import ChemicalTable from './table_of_names';
 
 const ExamplePage: React.FC = () => {
