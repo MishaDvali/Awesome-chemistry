@@ -163,7 +163,7 @@ const PeriodicTable = () => {
         </div>
       )}
 
-			<Excercise_5/>
+			<Excersise_5/>
       <div className="task">
         <h3>Визначіть валентність елементів у бінарних сполуках:</h3>
         {compounds && compounds.map((compound, index) => (
