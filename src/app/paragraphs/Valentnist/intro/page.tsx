@@ -18,7 +18,6 @@ const ExamplePage: React.FC = () => {
         <main className="main-container">
             <PeriodicTable/>
 						<Excersise_3/>
-						<Excersise_5/>
 						<ChemicalTable/>
         </main>
     </div>
