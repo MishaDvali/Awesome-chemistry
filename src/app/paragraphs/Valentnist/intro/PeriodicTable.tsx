@@ -43,7 +43,7 @@ const PeriodicTable = () => {
 
   const lightUp = (color, condition) => (condition ? { backgroundColor: color } : {});
 
-  return (
+  return ( <>
     <div className="periodic-table">
       <Legend />
       <div className="theory">
@@ -113,9 +113,9 @@ const PeriodicTable = () => {
             </tr>
             <tr>
               <td>3. Число атомів певного елемента дорівнює відношенню НСК до валентності цього елемента</td>
-              <td>6 : III = 2 (Al)<br>6 : II = 3 (O)</td>
-              <td>6 : VI = 1 (S)<br>6 : I = 6 (F)</td>
-              <td>4 : IV = 1 (C)<br>4 : II = 2 (S)</td>
+              <td>6 : III = 2 (Al)6 : II = 3 (O)</td>
+              <td>6 : VI = 1 (S)6 : I = 6 (F)</td>
+              <td>4 : IV = 1 (C)4 : II = 2 (S)</td>
             </tr>
             <tr>
               <td>4. Записуємо отримані індекси після символів елементів</td>
@@ -169,7 +169,7 @@ const PeriodicTable = () => {
       </div>
       <Task questions={questions} handleAnswer={handleAnswer} answers={answers} />
     </div>
-  );
+    </>);
 };
 
 export default PeriodicTable;
